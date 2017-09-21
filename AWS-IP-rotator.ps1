@@ -8,7 +8,7 @@ $OldAlloc= $OldAlloc -replace '"', ""
 $OldAlloc= $OldAlloc -replace  '[ ]', ""
 $OldAlloc= $OldAlloc -replace ']', ""
 $OldAlloc= $OldAlloc -replace  '[[]', ""
-aws ec2 associate-address  --network-interface-id eni-a2742f8e --allocation-id $Alloc 
+aws ec2 associate-address  --network-interface-id eni-a2742f8e --allocation-id $Alloc   #Change to your network-interface-id (eni) 
 echo 'Releasing old IP...'
 aws ec2 release-address --allocation-id $OldAlloc
 
